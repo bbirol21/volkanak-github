@@ -1,10 +1,22 @@
 from flask import Flask, render_template, url_for
+import csv
 
 app = Flask(__name__)
 
 @app.route('/')
+
+def load_csv_data(filename):
+    myList = []
+    with open(filename) as customers:
+        numbers_data = csv.reader(customers, delimiter=',')
+        next(numbers_data) #skip the header
+        for row in numbers_data:
+            myList.append(row)
+
 def index():
-    return "Hello World Bartu22222 github"
+    new_list = load_csv_data('customers.csv')
+    return new_list
+    #return "Hello World Bartu22222 github"
     #return render_template('index.html')
 
 if __name__ == "_main_":
