@@ -12,6 +12,7 @@ def load_csv_data(filename):
         next(numbers_data) #skip the header
         for row in numbers_data:
             myList.append(row)
+        return myList
 
 def index():
     new_list = load_csv_data('customers.csv')
