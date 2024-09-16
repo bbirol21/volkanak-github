@@ -3,7 +3,7 @@ import csv
 
 app = Flask(__name__)
 
-@app.route('/')
+
 
 def load_csv_data(filename):
     myList = []
@@ -14,9 +14,10 @@ def load_csv_data(filename):
             myList.append(row)
         return myList
 
+@app.route('/')
 def index():
     new_list = load_csv_data('customers.csv')
-    return new_list
+    return str(new_list)
     #return "Hello World Bartu22222 github"
     #return render_template('index.html')
 
