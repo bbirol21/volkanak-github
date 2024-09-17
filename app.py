@@ -9,7 +9,7 @@ app = Flask(__name__)
 #Azure Blob Storage Configuration
 connection_string = "DefaultEndpointsProtocol=https;AccountName=bartubirolsdocuments123;AccountKey=lGufKaiFanZWbpaSiKQJk53c/Wxd13ChrIqSJ8h1ghtiImB20i1GQXvYRPB8TTyuxCZrvl2Zvtex+AStjcdUZw==;EndpointSuffix=core.windows.net"
 container_name = "bartubirolscontainer"
-blob_name = "customers.csv"
+blob_name = "data.csv"
 
 def load_csv_data_from_blob():
     # Initialize BlobServiceClient
